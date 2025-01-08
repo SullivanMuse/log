@@ -8,11 +8,12 @@ import json
 
 class Level(Enum):
     """Enum represnting log level"""
-    Error = auto()      # red
-    Warning = auto()    # yellow
-    Log = auto()        # white
-    Info = auto()       # blue
-    Debug = auto()      # purple
+
+    Error = auto()  # red
+    Warning = auto()  # yellow
+    Log = auto()  # white
+    Info = auto()  # blue
+    Debug = auto()  # purple
 
 
 def _ensure_level(level):
