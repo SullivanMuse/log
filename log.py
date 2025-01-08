@@ -256,7 +256,7 @@ class Log:
 Log().set_global()
 
 
-def file_level(level=None):
+def file_level(new_level=None):
     """modify the file logging level stack of the global logger
 
     `self.file_level()` to pop and return the last-pushed logging level
@@ -272,10 +272,10 @@ def file_level(level=None):
         Level | None: when popping, the last-pushed logging level
     """
     if _LOG is not None:
-        _LOG.file_level(level)
+        _LOG.file_level(new_level)
 
 
-def level(level=None):
+def level(new_level=None):
     """modify the stdout logging level stack of the global logger
 
     `self.level()` to pop and return the last-pushed logging level
@@ -291,7 +291,7 @@ def level(level=None):
         Level | None: when popping, the last-pushed logging level
     """
     if _LOG is not None:
-        _LOG.level(level)
+        _LOG.level(new_level)
 
 
 def log(message, level=Level.Log):
