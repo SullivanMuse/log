@@ -52,7 +52,8 @@ _colors = {
 _reset = "\x1b[0m"
 
 
-# global logger
+# declare the global logger
+# NOTE: this is overwritten later in the file with the default global logger
 _LOG = None
 
 
@@ -250,6 +251,7 @@ class Log:
         raise NotImplementedError
 
 
+# set the default global logger to simply log to stdout
 Log().set_global()
 
 
